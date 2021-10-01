@@ -32,9 +32,12 @@ namespace NBi_CommonScreens.UserControls
             this.vSearchCodeScroll = new DevExpress.XtraEditors.VScrollBar();
             this.txtSearch = new DevExpress.XtraEditors.TextEdit();
             this.cboSearch = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.phoenixApplicationSearchFieldTableAdapter = new NBi_DataModule.NBi_DataSetTableAdapters.PhoenixApplicationSearchFieldTableAdapter();
+            this.nBi_DataSet = new NBi_DataModule.NBi_DataSet();
             this.phoenixApplicationSearchFieldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSearch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBi_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoenixApplicationSearchFieldBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +53,6 @@ namespace NBi_CommonScreens.UserControls
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.EditValue = "f";
             this.txtSearch.Location = new System.Drawing.Point(125, 0);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(179, 20);
@@ -60,14 +62,11 @@ namespace NBi_CommonScreens.UserControls
             // 
             // cboSearch
             // 
-            this.cboSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.cboSearch.EditValue = "";
             this.cboSearch.Location = new System.Drawing.Point(0, 0);
             this.cboSearch.Name = "cboSearch";
-            // 
-            // 
-            // 
             this.cboSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cboSearch.Size = new System.Drawing.Size(119, 20);
@@ -75,9 +74,19 @@ namespace NBi_CommonScreens.UserControls
             this.cboSearch.Tag = "";
             this.cboSearch.SelectedIndexChanged += new System.EventHandler(this.cboSearch_SelectedIndexChanged);
             // 
+            // phoenixApplicationSearchFieldTableAdapter
+            // 
+            this.phoenixApplicationSearchFieldTableAdapter.ClearBeforeFill = true;
+            // 
+            // nBi_DataSet
+            // 
+            this.nBi_DataSet.DataSetName = "NBi_DataSet";
+            this.nBi_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // phoenixApplicationSearchFieldBindingSource
             // 
             this.phoenixApplicationSearchFieldBindingSource.DataMember = "PhoenixApplicationSearchField";
+            this.phoenixApplicationSearchFieldBindingSource.DataSource = this.nBi_DataSet;
             // 
             // XtraGridSearch
             // 
@@ -90,6 +99,7 @@ namespace NBi_CommonScreens.UserControls
             this.Size = new System.Drawing.Size(305, 20);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboSearch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nBi_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoenixApplicationSearchFieldBindingSource)).EndInit();
             this.ResumeLayout(false);
 
