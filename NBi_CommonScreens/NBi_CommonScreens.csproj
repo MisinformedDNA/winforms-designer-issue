@@ -34,16 +34,6 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SigPlusNET, Version=1.1.3358.14336, Culture=neutral, PublicKeyToken=6aef07010bb0624f, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalLibraries\SigPlusNET.dll</HintPath>
-    </Reference>
-    <Reference Include="WindowsSignatureLib, Version=1.0.3685.28251, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ExternalLibraries\WindowsSignatureLib.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Update="UserControls\XtraGridSearch.cs" />
   </ItemGroup>
   <ItemGroup>
