@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace NBi_CommonScreens.UserControls
 {
-    public partial class XtraGridSearch : DevExpress.XtraEditors.XtraUserControl
+    public partial class XtraGridSearch : UserControl
     {
         public XtraGridSearch()
         {
@@ -11,14 +11,6 @@ namespace NBi_CommonScreens.UserControls
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
-        {
-        }
-
-        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void vSearchCodeScroll_Scroll(object sender, ScrollEventArgs e)
         {
         }
 

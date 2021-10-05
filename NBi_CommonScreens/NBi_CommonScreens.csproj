@@ -10,7 +10,4 @@
   <ItemGroup>
     <Compile Update="UserControls\XtraGridSearch.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DevExpress.Win.Reporting" Version="21.1.5" />
-  </ItemGroup>
 </Project>
